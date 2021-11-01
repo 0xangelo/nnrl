@@ -217,25 +217,28 @@ pyflakes = ">=2.3.0,<2.4.0"
 
 [[package]]
 name = "gym"
-version = "0.19.0"
-description = "The OpenAI Gym: A toolkit for developing and comparing your reinforcement learning agents."
+version = "0.21.0"
+description = "Gym: A universal API for reinforcement learning environments."
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-cloudpickle = ">=1.2.0,<1.7.0"
+cloudpickle = ">=1.2.0"
+importlib_metadata = {version = ">=4.8.1", markers = "python_version < \"3.8\""}
 numpy = ">=1.18.0"
 
 [package.extras]
-all = ["atari-py (==0.2.6)", "box2d-py (>=2.3.5,<2.4.0)", "opencv-python (>=3)", "mujoco_py (>=1.50,<2.0)", "scipy", "imageio", "pyglet (>=1.4.0)"]
-atari = ["atari-py (==0.2.6)", "opencv-python (>=3)"]
-box2d = ["box2d-py (>=2.3.5,<2.4.0)", "pyglet (>=1.4.0)"]
+accept-rom-license = ["autorom[accept-rom-license] (>=0.4.2,<0.5.0)"]
+all = ["mujoco_py (>=1.50,<2.0)", "lz4 (>=3.1.0)", "opencv-python (>=3)", "ale-py (>=0.7.1,<0.8.0)", "pyglet (>=1.4.0)", "scipy (>=1.4.1)", "box2d-py (==2.3.5)", "pyglet (>=1.4.0)", "ale-py (>=0.7.1,<0.8.0)", "lz4 (>=3.1.0)", "opencv-python (>=3)", "pyglet (>=1.4.0)", "box2d-py (==2.3.5)", "pyglet (>=1.4.0)", "scipy (>=1.4.1)", "mujoco_py (>=1.50,<2.0)"]
+atari = ["ale-py (>=0.7.1,<0.8.0)"]
+box2d = ["box2d-py (==2.3.5)", "pyglet (>=1.4.0)"]
 classic_control = ["pyglet (>=1.4.0)"]
-mujoco = ["mujoco_py (>=1.50,<2.0)", "imageio"]
-nomujoco = ["atari-py (==0.2.6)", "box2d-py (>=2.3.5,<2.4.0)", "opencv-python (>=3)", "scipy", "pyglet (>=1.4.0)"]
-robotics = ["mujoco_py (>=1.50,<2.0)", "imageio"]
-toy_text = ["scipy"]
+mujoco = ["mujoco_py (>=1.50,<2.0)"]
+nomujoco = ["lz4 (>=3.1.0)", "opencv-python (>=3)", "ale-py (>=0.7.1,<0.8.0)", "pyglet (>=1.4.0)", "scipy (>=1.4.1)", "box2d-py (==2.3.5)", "pyglet (>=1.4.0)"]
+other = ["lz4 (>=3.1.0)", "opencv-python (>=3)"]
+robotics = ["mujoco_py (>=1.50,<2.0)"]
+toy_text = ["scipy (>=1.4.1)"]
 
 [[package]]
 name = "identify"
@@ -258,9 +261,9 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "importlib-metadata"
-version = "4.6.3"
+version = "4.8.1"
 description = "Read metadata from Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -652,7 +655,7 @@ typing-extensions = {version = ">=3.7.4", markers = "python_version < \"3.8\""}
 name = "zipp"
 version = "3.5.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -663,7 +666,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7"
-content-hash = "df51a0ac44fea238f42b32e4f0cd22069234168e5502d5c4d63d463f4535bbdf"
+content-hash = "f1d235854d5534737382d7d125719f98680e7395ef3e39ef778ae6b639d1c321"
 
 [metadata.files]
 aiohttp = [
@@ -812,7 +815,7 @@ flake8 = [
     {file = "flake8-3.9.2.tar.gz", hash = "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b"},
 ]
 gym = [
-    {file = "gym-0.19.0.tar.gz", hash = "sha256:940069b983806e1ccc400fa6d47b4e34e462accf6a4fb0acb0a5e509ad0f502d"},
+    {file = "gym-0.21.0.tar.gz", hash = "sha256:0fd1ce165c754b4017e37a617b097c032b8c3feb8a0394ccc8777c7c50dddff3"},
 ]
 identify = [
     {file = "identify-2.2.11-py2.py3-none-any.whl", hash = "sha256:7abaecbb414e385752e8ce02d8c494f4fbc780c975074b46172598a28f1ab839"},
@@ -823,8 +826,8 @@ idna = [
     {file = "idna-3.2.tar.gz", hash = "sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"},
 ]
 importlib-metadata = [
-    {file = "importlib_metadata-4.6.3-py3-none-any.whl", hash = "sha256:51c6635429c77cf1ae634c997ff9e53ca3438b495f10a55ba28594dd69764a8b"},
-    {file = "importlib_metadata-4.6.3.tar.gz", hash = "sha256:0645585859e9a6689c523927a5032f2ba5919f1f7d0e84bd4533312320de1ff9"},
+    {file = "importlib_metadata-4.8.1-py3-none-any.whl", hash = "sha256:b618b6d2d5ffa2f16add5697cf57a46c76a56229b0ed1c438322e4e95645bd15"},
+    {file = "importlib_metadata-4.8.1.tar.gz", hash = "sha256:f284b3e11256ad1e5d03ab86bb2ccd6f5339688ff17a4d797a0fe7df326f23b1"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
