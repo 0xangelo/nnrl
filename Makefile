@@ -37,6 +37,9 @@ bump-major:
 	git add pyproject.toml
 	git commit -s -m "chore: bump version major"
 
+push-release:
+	git push origin main develop --tags
+
 changelog:
 	git describe --abbrev=0 | xargs poetry run auto-changelog --tag-prefix v --unreleased --stdout --starting-commit
 
