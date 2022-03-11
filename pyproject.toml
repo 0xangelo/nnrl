@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "nnrl"
-version = "0.1.0"
+version = "0.1.1"
 homepage = "https://github.com/angelolovatto/nnrl"
 description = "Top-level package for NN RL."
 authors = ["Ângelo Gregório Lovatto <angelolovatto@gmail.com>"]
