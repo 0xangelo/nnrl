@@ -33,7 +33,7 @@ pytest-cov = "*"
 black = {extras = ["d"], version = "*"}
 isort = "*"
 pre-commit = ">=2.9.0"
-pytest-mock = "^3.7.0"
+pytest-mock = "^3.8.1"
 
 [tool.isort]
 profile = "black"
